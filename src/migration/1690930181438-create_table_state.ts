@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner } from 'typeorm';
 
-export class CreateTableState1690412845556 implements MigrationInterface {
+export class CreateTableState1690930181438 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     queryRunner.query(`
         CREATE TABLE public.state (
@@ -22,7 +22,6 @@ export class CreateTableState1690412845556 implements MigrationInterface {
         ALTER SEQUENCE public.state_id_seq OWNED BY public.state.id;
 
         ALTER TABLE ONLY public.state ALTER COLUMN id SET DEFAULT nextval('public.state_id_seq'::regclass);
-
         `);
   }
 
