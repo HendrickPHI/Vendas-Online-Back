@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { hash } from 'bcrypt';
-import { CreateUserDto } from './dtos/createUser.dito';
+import { CreateUserDto } from './dtos/createUser.dto';
 import { UserEntity } from './entities/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -23,7 +23,7 @@ export class UserService {
       password: passwordHashed,
     });
   }
-  async getAlUser(): Promise<UserEntity[]> {
+  async getAllUser(): Promise<UserEntity[]> {
     return this.userRepository.find();
   }
 }
