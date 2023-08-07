@@ -13,8 +13,11 @@ export class StateEntity {
   @PrimaryGeneratedColumn('rowid')
   id: number;
 
+  @Column({ name: 'uf', nullable: false })
+  uf: string;
+
   @Column({ name: 'name', nullable: false })
-  name: number;
+  name: string;
 
   @CreateDateColumn({ name: 'created_at' })
   createdAt: Date;
