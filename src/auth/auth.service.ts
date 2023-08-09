@@ -22,7 +22,7 @@ export class AuthService {
 
     const isMacth = await compare(loginDto.password, user?.password || '');
 
-    if (user || !isMacth) {
+    if (!user || !isMacth) {
       throw new NotFoundException('Email or password invalid');
     }
 
