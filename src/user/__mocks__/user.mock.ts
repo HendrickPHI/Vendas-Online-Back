@@ -10,5 +10,5 @@ export const userEntityMock: UserEntity = {
   password: '$2b$10$RP9eUHI4LUGiVoJ11cc5K.XVem.pfZHhaK5xVfinRMq.MNole05Iq',
   phone: '321532523532',
   typeUser: UserType.User,
-  updateAt: new Date(),
+  updatedAt: new Date(),
 };

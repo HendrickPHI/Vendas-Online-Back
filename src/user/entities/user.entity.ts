@@ -7,6 +7,7 @@ import {
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { OrderEntity } from '../../order/entities/order.entity';
 
 @Entity({ name: 'user' })
 export class UserEntity {
@@ -35,8 +36,11 @@ export class UserEntity {
   createdAt: Date;
 
   @UpdateDateColumn({ name: 'updated_at' })
-  updateAt: Date;
+  updatedAt: Date;
 
   @OneToMany(() => AddressEntity, (address) => address.user)
   addresses?: AddressEntity[];
+
+  @OneToMany(() => OrderEntity, (order) => order.address)
+  orders?: OrderEntity[];
 }
