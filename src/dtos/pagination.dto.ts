@@ -21,8 +21,8 @@ export class Pagination<T> {
   meta: PaginationMeta;
   data: T;
 
-  constructor(pagationMega: PaginationMeta, data: T) {
-    this.meta = pagationMega;
+  constructor(pagationMeta: PaginationMeta, data: T) {
+    this.meta = pagationMeta;
     this.data = data;
   }
 }

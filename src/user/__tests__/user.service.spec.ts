@@ -106,7 +106,7 @@ describe('UserService', () => {
     const spy = jest.spyOn(userRepository, 'save');
     jest.spyOn(userRepository, 'findOne').mockResolvedValue(undefined);
 
-    await service.createUser(createUserMock, UserType.Admin);
+    await service.createUser(createUserMock);
 
     expect(spy.mock.calls[0][0].typeUser).toEqual(UserType.Admin);
   });

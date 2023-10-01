@@ -78,7 +78,7 @@ describe('ProductService', () => {
     });
   });
 
-  it('should return relatiosn and array in find all products', async () => {
+  it('should return relations and array in find all products', async () => {
     const spy = jest.spyOn(productRepository, 'find');
     const products = await service.findAll([1], true);
 

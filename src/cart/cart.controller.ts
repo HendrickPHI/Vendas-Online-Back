@@ -20,7 +20,13 @@ import { ReturnCartDTO } from './dtos/return-cart.dto';
 import { UpdateCartDTO } from './dtos/update-cart.dto';
 import { Response } from 'express';
 
-@Roles(UserType.User, UserType.Admin, UserType.Root)
+@Roles(
+  UserType.User,
+  UserType.Admin,
+  UserType.Root,
+  UserType.Root,
+  UserType.Root,
+)
 @Controller('cart')
 export class CartController {
   constructor(private readonly cartService: CartService) {}
