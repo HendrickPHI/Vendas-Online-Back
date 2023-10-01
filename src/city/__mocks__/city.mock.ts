@@ -4,7 +4,7 @@ import { CityEntity } from '../entities/city.entity';
 export const cityMock: CityEntity = {
   createdAt: new Date(),
   id: 6543543,
-  name: 'cityName',
+  name: 'Nome da cidade',
   stateId: stateMock.id,
   updateAt: new Date(),
 };
