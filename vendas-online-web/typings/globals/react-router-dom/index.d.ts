@@ -13,11 +13,10 @@ declare module 'react-router-dom' {
     Switch,
     match,
     matchPath,
-    withRouter
+    withRouter,
   } from 'react-router';
   import * as React from 'react';
   import * as H from 'history';
-
 
   interface BrowserRouterProps {
     basename?: string;
@@ -27,7 +26,6 @@ declare module 'react-router-dom' {
   }
   class BrowserRouter extends React.Component<BrowserRouterProps, void> {}
 
-
   interface HashRouterProps {
     basename?: string;
     getUserConfirmation?: () => void;
@@ -35,13 +33,11 @@ declare module 'react-router-dom' {
   }
   class HashRouter extends React.Component<HashRouterProps, void> {}
 
-
   interface LinkProps extends React.HTMLAttributes<HTMLAnchorElement> {
     to: H.LocationDescriptor;
     replace?: boolean;
   }
   class Link extends React.Component<LinkProps, void> {}
-
 
   interface NavLinkProps extends LinkProps {
     activeClassName?: string;
@@ -51,7 +47,6 @@ declare module 'react-router-dom' {
     isActive?: (location: H.Location, props: any) => boolean;
   }
   class NavLink extends React.Component<NavLinkProps, void> {}
-
 
   export {
     BrowserRouter,
@@ -70,6 +65,6 @@ declare module 'react-router-dom' {
     Switch,
     match, // TypeScript specific, not from React Router itself
     matchPath,
-    withRouter
-  }
+    withRouter,
+  };
 }
