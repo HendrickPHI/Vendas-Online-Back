@@ -4,6 +4,7 @@ import { BoxInput, TitleInput } from './input.styles';
 
 interface InputProps extends InputPropsAntd {
   title?: string;
+  margin?: string;
 }
 
 const Input = ({ title, ...props }: InputProps) => {
